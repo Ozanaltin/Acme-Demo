@@ -1,4 +1,16 @@
 # Salesforce Project: Lead Routing and Velocity Tracking
+Design a Salesforce flow to streamline a common business process, create a report to track relevant metrics, and build a dashboard for visualizing key performance indicators (KPIs).
+Scenario:
+Our customer, Acme Demo Corporation, has just implemented territory management into Salesforce and needs help routing leads efficiently based on the country the lead originated from. They have a Pardot web form that asks the submitter for their country (Lead.Country) and their budget (Lead.Budget). They would like all leads from Spain to go to their EMEA team, with leads that have a budget over $50000 going to their Account Executive team, and leads below that budget to go to their BDR team. They also want to report on how quickly each team is working through their leads to ensure their lead pipeline is being handled efficiently following their new territory split.
+    1. Lead Routing
+    • Explain how you would route the leads correctly to meet the customer’s brief
+    2. Salesforce Flow design
+    • Design a flow to capture lead velocity through the lead stages for later reporting
+    • Explain any background work required (custom objects, fields etc) required to make the flow.
+    3. Report creation
+    • Explain how you would report on the key metrics requested by the customer to ensure leads were being actioned in a timely manner
+    4. Dashboard creation
+    • Explain how you would visualize the reports in a dashboard
 
 ## **Table of Contents**
 
