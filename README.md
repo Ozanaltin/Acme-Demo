@@ -1,4 +1,3 @@
-
 # Salesforce Project: Lead Routing and Velocity Tracking
 
 ## **Table of Contents**
@@ -16,9 +15,10 @@
 
 This project provides an end-to-end solution for managing lead routing and tracking lead velocity within Salesforce. By leveraging Salesforce Flows, Apex Code, and custom objects, the system ensures accurate lead distribution and detailed pipeline performance insights.
 
-**Presentation**: [Watch the Loom Presentation](https://www.loom.com/share/55864cb2a5dc487aa708e5862679b183?sid=70353eff-9013-4a94-9529-3840f0f6379c)
-
----
+***Presentation***: [Watch the Loom Presentation](https://www.loom.com/share/55864cb2a5dc487aa708e5862679b183?sid=70353eff-9013-4a94-9529-3840f0f6379c)
+***Assignment Diagram***:
+  ![Acme Diagram](Screenshots/Acme%20Demo%20Diagram.png)
+--------------
 
 ## **Key Features**
 
@@ -26,12 +26,10 @@ This project provides an end-to-end solution for managing lead routing and track
 
    - Assign leads to specific queues based on country and budget criteria.
    - Supports dynamic toggling between Apex and Salesforce Flow solutions.
-
 2. **Lead Velocity Tracking**
 
    - Monitor the time leads spend in each stage using the `Days in Status` formula field.
    - Maintain detailed records in the custom `Lead Status History` object.
-
 3. **Detailed Reports and Dashboards**
 
    - Gain insights into lead distribution and pipeline performance through customizable reports and dashboards.
@@ -48,10 +46,12 @@ This project provides an end-to-end solution for managing lead routing and track
   - **Status** (Picklist)
   - **Timestamp** (Date/Time)
   - **Days in Status** (Formula Field)
+
 ```apex
 ROUND(DATEVALUE(NOW()) - DATEVALUE(Timestamp__c), 2)
 ```
-- **Screenshot**:
+
+- **Screenshot References**:
   ![Lead Status History and Fields](Screenshots/Lead%20Status%20History%20and%20Fields.png)
 
 ---
@@ -66,7 +66,7 @@ ROUND(DATEVALUE(NOW()) - DATEVALUE(Timestamp__c), 2)
 - Leads with `Country = Spain` and `Budget <= 50,000` → **BDR Queue**.
 - All other leads → **Default Queue**.
 - **Screenshot References**:
-![Lead Routing Flow](Screenshots/Lead%20Routing%20Flow.png)
+  ![Lead Routing Flow](Screenshots/Lead%20Routing%20Flow.png)
 
 ---
 
@@ -79,13 +79,14 @@ ROUND(DATEVALUE(NOW()) - DATEVALUE(Timestamp__c), 2)
 - Triggered whenever a lead’s status changes.
 - Records details such as Lead ID, Status, Timestamp, and Days in Status.
 - **Screenshot References**:
-![Lead Velocity Tracking Flow](Screenshots/Lead%20Velocity%20Tracking%20Flow.png);
+  ![Lead Velocity Tracking Flow](Screenshots/Lead%20Velocity%20Tracking%20Flow.png)
 
 ---
 
 ### **4. Apex Code for Lead Routing**
 
 #### **LeadRoutingHandler.cls**
+
 <details>
 <summary>View Code</summary>
 
@@ -144,13 +145,14 @@ public class LeadVelocityLogger {
 <details>
 <summary>View Full Table (5 rows)</summary>
 
-| First Name          | Last Name    | Company / Account     | Budget | Lead Owner               |
-|:--------------------|:------------|:----------------------|:-------|:------------------------|
-| Henry               | Moore       | Skyline Tech          | 88890  | Account Executive Queue |
-| Olivia              | Williams    | MegaSys               | 66677  | Account Executive Queue |
-| Sophia              | Taylor      | CloudNova             | 98789  | Account Executive Queue |
-| Liam                | Rodriguez   | Greenfield Systems    | 90123  | Account Executive Queue |
-| Luna                | Davis       | FusionWorks           | 67890  | Account Executive Queue |
+| First Name | Last Name | Company / Account  | Budget | Lead Owner              |
+| :--------- | :-------- | :----------------- | :----- | :---------------------- |
+| Henry      | Moore     | Skyline Tech       | 88890  | Account Executive Queue |
+| Olivia     | Williams  | MegaSys            | 66677  | Account Executive Queue |
+| Sophia     | Taylor    | CloudNova          | 98789  | Account Executive Queue |
+| Liam       | Rodriguez | Greenfield Systems | 90123  | Account Executive Queue |
+| Luna       | Davis     | FusionWorks        | 67890  | Account Executive Queue |
+
 <!-- Add remaining 45 rows here -->
 
 </details>
@@ -166,13 +168,13 @@ public class LeadVelocityLogger {
 <details>
 <summary>View Full Table (5 rows)</summary>
 
-| Lead                | Timestamp        | Days in Status | Status              |
-|:--------------------|:----------------|:---------------|:-------------------|
-| Ethan Taylor        | 11.12.2024 00:00| 28             | Open - Not Contacted|
-| Liam Smith          | 10.12.2024 00:00| 29             | Open - Not Contacted|
-| Harper Moore        | 10.12.2024 00:00| 29             | Open - Not Contacted|
-| Sophia Martinez     | 5.12.2024 00:00 | 34             | Open - Not Contacted|
-| Mason Taylor        | 1.12.2024 00:00 | 38             | Open - Not Contacted|
+| Lead            | Timestamp        | Days in Status | Status               |
+| :-------------- | :--------------- | :------------- | :------------------- |
+| Ethan Taylor    | 11.12.2024 00:00 | 28             | Open - Not Contacted |
+| Liam Smith      | 10.12.2024 00:00 | 29             | Open - Not Contacted |
+| Harper Moore    | 10.12.2024 00:00 | 29             | Open - Not Contacted |
+| Sophia Martinez | 5.12.2024 00:00  | 34             | Open - Not Contacted |
+| Mason Taylor    | 1.12.2024 00:00  | 38             | Open - Not Contacted |
 
 **File**: [Lead Velocity Report.csv](Reports%20and%20Dashboards/Lead%20Velocity%20Report.csv)
 
@@ -184,7 +186,7 @@ public class LeadVelocityLogger {
 
 ### **Lead Velocity Insights**
 
-**Image**:
+**Screenshot References**:
 
 ![Lead Velocity Insights Dashboard](Reports%20and%20Dashboards/Lead%20Velocity%20Insights%20Dashboard.png)
 
