@@ -7,6 +7,6 @@
   ],
   "name": "Acme Demo",
   "namespace": "",
-  "sfdcLoginUrl": "https://saascendassesmentozanaltin-dev-ed.trailblaze.my.salesforce.com",
+  "sfdcLoginUrl": "https://projects-ozanaltin-dev-ed.trailblaze.my.salesforce.com",
   "sourceApiVersion": "62.0"
 }

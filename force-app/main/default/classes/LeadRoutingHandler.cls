@@ -1,7 +1,7 @@
 public class LeadRoutingHandler {
     // Queue IDs (Replace with your actual Queue IDs from Salesforce)
-    private static final Id ACCOUNT_EXECUTIVE_QUEUE_ID = '00GWU0000082esn'; // Replace with Account Executive Queue ID
-    private static final Id BDR_QUEUE_ID = '00GWU0000082euP'; // Replace with BDR Queue ID
+    private static final Id ACCOUNT_EXECUTIVE_QUEUE_ID = '00GQy00000A7CMr'; // Replace with Account Executive Queue ID
+    private static final Id BDR_QUEUE_ID = '00GQy00000A7COT'; // Replace with BDR Queue ID
 
     /**
      * Routes leads based on their country and budget.
